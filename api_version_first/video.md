@@ -12,9 +12,8 @@ Request Method: **POST**
 Request Parameters:
 | Significance | Field | Type | Required | Description |
 | :-: | :-: | :-: | :-: | :-: |
-| 视频名称 | videoName | string | yes | Video name uses apk name + report + timestamp |
-| 上传者 | uploadedBy | string | yes | |
-| 应用名 | appName | string | yes | Which app is the video recorded |
+| 视频名称 | videoName | string | | |
+| 视频时间 | videoTime | string | | |
 
 ---
 
@@ -41,21 +40,22 @@ Request Parameters:
 | 页码号 | pageNumber | int | yes | |
 | 分页大小 | pageSize | int | yes | |
 
+You can also add some conditions which is in "get-one" api.
+
 ---
 
-- /get
+- /get-one
 
-Find the specific video(s).
+Get the first match data.
 
 Request Method: **GET**
 
 Request Parameters:
 | Significance | Field | Type | Required | Description |
 | :-: | :-: | :-: | :-: | :-: |
-| 主键 | id | int | Optional | 
+| 主键 | videoID | uint | Optional | |
 | 视频名称 | videoName | string | Optional | |
-| 上传者 | uploadedBy | string | Optional | |
-| 应用名 | appName | string | Optional | |
+| 视频时间 | videoTime | string | Optional | |
 
 ---
 
@@ -68,10 +68,9 @@ Request Method: **GET**
 Request Parameters:
 | Significance | Field | Type | Required | Description |
 | :-: | :-: | :-: | :-: | :-: |
-| 主键 | id | int | Optional | 
+| 主键 | videoID | uint | Optional | |
 | 视频名称 | videoName | string | Optional | |
-| 上传者 | uploadedBy | string | Optional | |
-| 应用名 | appName | string | Optional | |
+| 视频时间 | videoTime | string | Optional | |
 
 ---
 
@@ -84,10 +83,11 @@ Request Method: **DELETE**
 Request Parameters:
 | Significance | Field | Type | Required | Description |
 | :-: | :-: | :-: | :-: | :-: |
-| 主键 | id | int | Optional | 
+| 主键 | videoID | uint | Optional | |
 | 视频名称 | videoName | string | Optional | |
-| 上传者 | uploadedBy | string | Optional | |
-| 应用名 | appName | string | Optional | |
+| 视频时间 | videoTime | string | Optional | |
+
+**Notice**: If all parameters are empty, nothing will be done.
 
 ---
 
@@ -100,9 +100,8 @@ Request Method: **PUT**
 Request Parameters:
 | Significance | Field | Type | Required | Description |
 | :-: | :-: | :-: | :-: | :-: |
-| 主键 | id | int | yes | 
+| 主键 | videoID | uint | Optional | |
 | 视频名称 | videoName | string | Optional | |
-| 上传者 | uploadedBy | string | Optional | |
-| 应用名 | appName | string | Optional | |
+| 视频时间 | videoTime | string | Optional | |
 
 ---

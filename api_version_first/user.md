@@ -16,7 +16,6 @@ Request Parameters:
 | 真实姓名 | realName | string | | |
 | 角色 | role | string | yes | There are currently three roles: ordinary, expert, and administrator |
 | 邮箱 | email | string | | |
-| 电话 | phoneNumber | string | | |
 | 简介 | description | string | | |
 | 密码 | password | string | | |
 
@@ -45,23 +44,24 @@ Request Parameters:
 | 页码号 | pageNumber | int | yes | |
 | 分页大小 | pageSize | int | yes | |
 
+You can also add some conditions which is in "get-one" api.
+
 ---
 
-- /get
+- /get-one
 
-Find the specific user(s).
+Get the first match data.
 
 Request Method: **GET**
 
 Request Parameters:
 | Significance | Field | Type | Required | Description |
 | :-: | :-: | :-: | :-: | :-: |
-| 主键 | id | int | Optional | |
+| 主键 | userID | uint | Optional | |
 | 用户名 | username | string | Optional | |
 | 真实姓名 | realName | string | Optional | |
 | 角色 | role | string | Optional | ordinary, expert, and administrator |
 | 邮箱 | email | string | Opthional | |
-| 电话 | phoneNumber | string | Optional | |
 
 ---
 
@@ -74,12 +74,11 @@ Request Method: **GET**
 Request Parameters:
 | Significance | Field | Type | Required | Description |
 | :-: | :-: | :-: | :-: | :-: |
-| 主键 | id | int | Optional | |
+| 主键 | userID | uint | Optional | |
 | 用户名 | username | string | Optional | |
 | 真实姓名 | realName | string | Optional | |
 | 角色 | role | string | Optional | ordinary, expert, and administrator |
 | 邮箱 | email | string | Opthional | |
-| 电话 | phoneNumber | string | Optional | |
 
 ---
 
@@ -97,7 +96,8 @@ Request Parameters:
 | 真实姓名 | realName | string | Optional | |
 | 角色 | role | string | Optional | ordinary, expert, and administrator |
 | 邮箱 | email | string | Opthional | |
-| 电话 | phoneNumber | string | Optional | |
+
+**Notice**: If all parameters are empty, nothing will be done.
 
 ---
 
@@ -115,6 +115,7 @@ Request Parameters:
 | 真实姓名 | realName | string | Optional | |
 | 角色 | role | string | Optional | ordinary, expert, and administrator |
 | 邮箱 | email | string | Opthional | |
-| 电话 | phoneNumber | string | Optional | |
+| 简介 | description | string | Opthional | |
+| 密码 | password | string | | |
 
 ---

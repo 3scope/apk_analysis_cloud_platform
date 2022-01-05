@@ -12,9 +12,8 @@ Request Method: **POST**
 Request Parameters:
 | Significance | Field | Type | Required | Description |
 | :-: | :-: | :-: | :-: | :-: |
-| 报告名称 | reportName | string | yes | Report name uses apk name + report + timestamp |
-| 上传者 | uploadedBy | string | yes | |
-| 应用名 | appName | string | yes | Which app is the report recorded |
+| 报告名称 | reportName | string | | |
+| 案件ID | caseID | uint | | Logical foreign key |
 
 ---
 
@@ -41,21 +40,22 @@ Request Parameters:
 | 页码号 | pageNumber | int | yes | |
 | 分页大小 | pageSize | int | yes | |
 
+You can also add some conditions which is in "get-one" api.
+
 ---
 
-- /get
+- /get-one
 
-Find the specific report(s).
+Get the first match data.
 
 Request Method: **GET**
 
 Request Parameters:
 | Significance | Field | Type | Required | Description |
 | :-: | :-: | :-: | :-: | :-: |
-| 主键 | id | int | Optional | 
+| 主键 | reportID | uint | Optional | |
 | 报告名称 | reportName | string | Optional | |
-| 上传者 | uploadedBy | string | Optional | |
-| 应用名 | appName | string | Optional | |
+| 案件ID | staticAnalysisID | uint | Optional | Logical foreign key |
 
 ---
 
@@ -68,10 +68,9 @@ Request Method: **GET**
 Request Parameters:
 | Significance | Field | Type | Required | Description |
 | :-: | :-: | :-: | :-: | :-: |
-| 主键 | id | int | Optional | 
+| 主键 | reportID | uint | Optional | |
 | 报告名称 | reportName | string | Optional | |
-| 上传者 | uploadedBy | string | Optional | |
-| 应用名 | appName | string | Optional | |
+| 案件ID | staticAnalysisID | uint | Optional | Logical foreign key |
 
 ---
 
@@ -84,10 +83,11 @@ Request Method: **DELETE**
 Request Parameters:
 | Significance | Field | Type | Required | Description |
 | :-: | :-: | :-: | :-: | :-: |
-| 主键 | id | int | Optional | 
+| 主键 | reportID | uint | Optional | |
 | 报告名称 | reportName | string | Optional | |
-| 上传者 | uploadedBy | string | Optional | |
-| 应用名 | appName | string | Optional | |
+| 案件ID | staticAnalysisID | uint | Optional | Logical foreign key |
+
+**Notice**: If all parameters are empty, nothing will be done.
 
 ---
 
@@ -100,9 +100,8 @@ Request Method: **PUT**
 Request Parameters:
 | Significance | Field | Type | Required | Description |
 | :-: | :-: | :-: | :-: | :-: |
-| 主键 | id | int | yes | 
+| 主键 | reportID | uint | Optional | |
 | 报告名称 | reportName | string | Optional | |
-| 上传者 | uploadedBy | string | Optional | |
-| 应用名 | appName | string | Optional | |
+| 案件ID | staticAnalysisID | uint | Optional | Logical foreign key |
 
 ---

@@ -91,7 +91,7 @@ Request Method: **DELETE**
 Request Parameters:
 | Significance | Field | Type | Required | Description |
 | :-: | :-: | :-: | :-: | :-: |
-| 主键 | id | int | Optional | |
+| 主键 | userID | int | Optional | |
 | 用户名 | username | string | Optional | |
 | 真实姓名 | realName | string | Optional | |
 | 角色 | role | string | Optional | ordinary, expert, and administrator |
@@ -110,12 +110,11 @@ Request Method: **PUT**
 Request Parameters:
 | Significance | Field | Type | Required | Description |
 | :-: | :-: | :-: | :-: | :-: |
-| 主键 | id | int | yes | |
+| 主键 | userID | int | yes | |
 | 用户名 | username | string | Optional | |
 | 真实姓名 | realName | string | Optional | |
 | 角色 | role | string | Optional | ordinary, expert, and administrator |
 | 邮箱 | email | string | Opthional | |
 | 简介 | description | string | Opthional | |
-| 密码 | password | string | | |
 
 ---

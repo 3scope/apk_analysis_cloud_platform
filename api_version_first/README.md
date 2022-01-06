@@ -8,7 +8,7 @@ The default port is **11000**.
 
 Request 'Content-Type' field is **"application/x-www-form-urlencoded"** or **"multipart/form-data"**.
 
-When your HTTP request cannot carry parameters(such as get), you should write the parameters to the query request.
+When your HTTP request cannot carry parameters(such as get), you should write the parameters to the query string. Only "GET" method use query string to pass data.
 
 Please strictly observe the capitalization and HTTP request method.
 
